@@ -18,6 +18,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/invoices")
+@CrossOrigin(origins = "http://localhost:5173")
 public class InvoiceController {
 
     private final VendorRepository vendorRepo;
@@ -73,6 +74,18 @@ public class InvoiceController {
     public ResponseEntity<List<Invoice>> getInvoiceByVendor(@PathVariable Long vendorId){
         List<Invoice> invoices = invoiceRepo.findByVendorVendorId(vendorId);
         return ResponseEntity.ok(invoices);
+    }
+
+    // delete all vendors
+    @DeleteMapping("/all-vendors")
+    public void deleteAllVendors(){
+        vendorRepo.deleteAll();
+    }
+
+    //delete all invoices
+    @DeleteMapping("/all-invoices")
+    public void deleteAllInvoices(){
+        invoiceRepo.deleteAll();
     }
 
 

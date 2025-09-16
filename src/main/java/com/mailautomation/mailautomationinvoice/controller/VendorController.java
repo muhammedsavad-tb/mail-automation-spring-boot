@@ -11,6 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/vendors")
+@CrossOrigin(origins = "http://localhost:5173")
 public class VendorController {
 
     private final VendorRepository vendorRepo;
