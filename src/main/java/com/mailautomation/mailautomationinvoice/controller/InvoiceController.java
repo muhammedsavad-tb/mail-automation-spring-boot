@@ -18,7 +18,8 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/invoices")
-@CrossOrigin(origins = "https://muhammedsavad-tb-mailautomationfrontend-react.buv7hx.easypanel.host")
+@CrossOrigin(origins = {"https://134.209.155.202", "http://localhost:5173" })
+//@CrossOrigin(origins = "https://muhammedsavad-tb-mailautomationfrontend-react.buv7hx.easypanel.host")
 //@CrossOrigin(origins = "https://134.209.155.202")
 //@CrossOrigin(origins = "http://localhost:5173")
 public class InvoiceController {
